@@ -5,8 +5,16 @@ import PackageDescription
 
 let package = Package(
     name: "CTidy",
-    pkgConfig: "tidy",
-    providers: [
-        .brew(["tidy-html5"])
+    products: [
+        .library(name: "CTidy", targets: ["CTidy"]),
+    ],
+    targets: [
+        .systemLibrary(
+            name: "CTidy",
+            pkgConfig: "tidy",
+            providers: [
+                .brew(["tidy-html5"]),
+            ]
+        )
     ]
 )
