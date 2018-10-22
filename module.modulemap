@@ -1,5 +1,5 @@
 module CTidy [system] {
-  header "tidy.h"
+  header "shim.h"
   link "tidy"
   export *
 }
