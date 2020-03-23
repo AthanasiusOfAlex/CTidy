@@ -3,18 +3,18 @@
 
 import PackageDescription
 
-let package = Package(
-    name: "CTidy",
-    products: [
-        .library(name: "CTidy", targets: ["CTidy"]),
-    ],
-    targets: [
-        .systemLibrary(
-            name: "CTidy",
-            pkgConfig: "tidy",
-            providers: [
-                .brew(["tidy-html5"]),
-            ]
-        )
-    ]
-)
+    let package = Package(
+        name: "CTidy",
+        products: [
+            .library(name: "CTidy", targets: ["CTidy"]),
+        ],
+        targets: [
+            .systemLibrary(
+                name: "CTidy",
+                pkgConfig: "tidy",
+                providers: [
+                    .brew(["tidy-html5"]),
+                ]
+            )
+        ]
+    )
